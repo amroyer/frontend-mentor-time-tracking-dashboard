@@ -1,80 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./global.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid container">
+        <section class="card profile-card" id="profile-card">
+          <div class="front">
+            <img src="./images/image-jeremy.png" alt="" class="profile-img" />
+            <h1>
+              Report for <br />
+              <span class="name">Jeremy Robson</span>
+            </h1>
+          </div>
+          <div class="rear">
+            <nav class="timeframes">
+              <ul class="timeframe-list">
+                <li class="timeframe active">Daily</li>
+                <li class="timeframe">Weekly</li>
+                <li class="timeframe">Monthly</li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <section class="card work-card" id="work-card">
+          <div class="rear">
+            <img src="./images/icon-work.svg" alt="" />
+          </div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Work</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">5hrs</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 7hrs</p>
+            <!-- daily -->
+            <p class="weekly current">32hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 36hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">103hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 128hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+        <section class="card play-card" id="play-card">
+          <div class="rear"><img src="./images/icon-play.svg" alt="" /></div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Play</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">1hr</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 2hrs</p>
+            <!-- daily -->
+            <p class="weekly current">10hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 8hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">23hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 29hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+        <section class="card study-card" id="study-card">
+          <div class="rear"><img src="./images/icon-study.svg" alt="" /></div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Study</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">0hrs</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 1hr</p>
+            <!-- daily -->
+            <p class="weekly current">4hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 7hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">13hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 19hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+        <section class="card exercise-card" id="exercise-card">
+          <div class="rear">
+            <img src="./images/icon-exercise.svg" alt="" />
+          </div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Exercise</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">1hr</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 1hr</p>
+            <!-- daily -->
+            <p class="weekly current">4hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 5hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">11hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 18hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+        <section class="card social-card" id="social-card">
+          <div class="rear"><img src="./images/icon-social.svg" alt="" /></div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Social</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">1hr</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 3hrs</p>
+            <!-- daily -->
+            <p class="weekly current">5hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 10hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">21hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 23hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+        <section class="card self-care-card" id="self-care-card">
+          <div class="rear">
+            <img src="./images/icon-self-care.svg" alt="" />
+          </div>
+          <div class="front">
+            <header class="card-header row">
+              <h2>Self Care</h2>
+              <div class="dropdown-icon">
+                <img src="./images/icon-ellipsis.svg" alt="" />
+              </div>
+            </header>
+            <p class="daily current visible">0hrs</p>
+            <!-- daily -->
+            <p class="daily previous visible">Yesterday - 1hr</p>
+            <!-- daily -->
+            <p class="weekly current">2hrs</p>
+            <!-- weekly -->
+            <p class="weekly previous">Last Week - 2hrs</p>
+            <!-- weekly -->
+            <p class="monthly current">7hrs</p>
+            <!-- monthly -->
+            <p class="monthly previous">Previous - 11hrs</p>
+            <!-- monthly -->
+          </div>
+        </section>
+      </div>
+    </main>
 
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/amroyer/">Aaron Royer</a>.
+    </div>
+  </body>
 </html>
