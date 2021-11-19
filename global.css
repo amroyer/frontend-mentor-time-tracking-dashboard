@@ -1,0 +1,284 @@
+/* Font import */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+/* Theme */
+:root {
+  /* Primary colors */
+  --primary-color: hsl(246, 80%, 60%);
+  --work-color: hsl(15, 100%, 70%);
+  --play-color: hsl(195, 74%, 62%);
+  --study-color: hsl(348, 100%, 68%);
+  --exercise-color: hsl(145, 58%, 55%);
+  --social-color: hsl(264, 64%, 52%);
+  --self-care-color: hsl(43, 84%, 65%);
+  /* Neutral colors */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+html,
+body {
+  background-color: var(--very-dark-blue);
+  color: hsl(0, 0%, 100%);
+  font-family: "Rubik", sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+a,
+nav li {
+  cursor: pointer;
+}
+
+/* Layout */
+
+.container {
+  margin: 3rem auto;
+  height: 60%;
+  width: 80%;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.card .front {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 1rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card .rear {
+  border-radius: 10px;
+  position: relative;
+  height: 68px;
+  margin-bottom: -24px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.rear img {
+  position: absolute;
+  right: 12px;
+}
+
+/* Profile card */
+.profile-card {
+  grid-area: profile;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.profile-card .front {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.profile-card .rear {
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  height: min-content;
+  margin-top: -2rem;
+}
+
+.timeframes {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+.timeframe-list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timeframe {
+  color: var(--desaturated-blue);
+  line-height: 2.25;
+}
+
+.active {
+  color: hsl(0, 0%, 100%);
+}
+
+.profile-img {
+  border: 4px solid white;
+  border-radius: 50%;
+  width: 25%;
+}
+
+h1 {
+  color: var(--pale-blue);
+}
+
+.name {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* Other cards */
+.current {
+  display: none;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.previous {
+  color: var(--pale-blue);
+  display: none;
+}
+
+.visible {
+  display: revert;
+}
+
+.dropdown-icon {
+  align-items: center;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  height: 3.5rem;
+  justify-content: center;
+  width: 3.5rem;
+}
+
+.dropdown-icon:hover {
+  background-color: hsla(236, 100%, 87%, 10%);
+}
+
+.work-card .rear {
+  background-color: var(--work-color);
+}
+
+.work-card img {
+  top: -12px;
+}
+
+.play-card .rear {
+  background-color: var(--play-color);
+}
+
+.play-card img {
+  top: -6px;
+}
+
+.study-card .rear {
+  background-color: var(--study-color);
+}
+
+.study-card img {
+  top: -6px;
+}
+
+.exercise-card .rear {
+  background-color: var(--exercise-color);
+}
+
+.exercise-card img {
+  top: -3px;
+}
+
+.social-card .rear {
+  background-color: var(--social-color);
+}
+
+.social-card img {
+  top: -3px;
+}
+
+.self-care-card .rear {
+  background-color: var(--self-care-color);
+}
+
+.self-care-card img {
+  top: -12px;
+}
+
+/* Media Queries */
+@media (min-width: 850px) {
+  .container {
+    margin: 10rem auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self-care";
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .profile-card .front {
+    align-items: flex-start;
+    flex-direction: column;
+    height: 70%;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+  }
+
+  .profile-img {
+    margin-bottom: auto;
+    width: 50%;
+  }
+
+  h1 {
+    margin-bottom: auto;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .profile-card .rear {
+    top: 60%;
+    height: 40%;
+    position: absolute;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .timeframes {
+    margin-top: 4rem;
+  }
+
+  .timeframe-list {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--desaturated-blue);
+}
