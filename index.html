@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./global.css" />
+    <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
@@ -30,9 +31,27 @@
           <div class="rear">
             <nav class="timeframes">
               <ul class="timeframe-list">
-                <li class="timeframe active">Daily</li>
-                <li class="timeframe">Weekly</li>
-                <li class="timeframe">Monthly</li>
+                <li
+                  class="timeframe active"
+                  id="daily-toggle"
+                  onclick="activateDaily()"
+                >
+                  Daily
+                </li>
+                <li
+                  class="timeframe"
+                  id="weekly-toggle"
+                  onclick="activateWeekly()"
+                >
+                  Weekly
+                </li>
+                <li
+                  class="timeframe"
+                  id="monthly-toggle"
+                  onclick="activateMonthly()"
+                >
+                  Monthly
+                </li>
               </ul>
             </nav>
           </div>
