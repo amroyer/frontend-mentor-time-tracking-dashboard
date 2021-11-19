@@ -14,31 +14,31 @@ const activate = (elem) => {
   elem.classList.add("active");
 };
 
-const activateDaily = () => {
+const reset = () => {
   document.querySelectorAll(".current").forEach(hide);
   document.querySelectorAll(".previous").forEach(hide);
-  document.querySelectorAll(".daily").forEach(show);
   document.querySelectorAll(".timeframe").forEach(deactivate);
+};
+
+const activateDaily = () => {
+  reset();
+  document.querySelectorAll(".daily").forEach(show);
   const dailyToggle = document.querySelector("#daily-toggle");
   activate(dailyToggle);
   return null;
 };
 
 const activateWeekly = () => {
-  document.querySelectorAll(".current").forEach(hide);
-  document.querySelectorAll(".previous").forEach(hide);
+  reset();
   document.querySelectorAll(".weekly").forEach(show);
-  document.querySelectorAll(".timeframe").forEach(deactivate);
   const weeklyToggle = document.querySelector("#weekly-toggle");
   activate(weeklyToggle);
   return null;
 };
 
 const activateMonthly = () => {
-  document.querySelectorAll(".current").forEach(hide);
-  document.querySelectorAll(".previous").forEach(hide);
+  reset();
   document.querySelectorAll(".monthly").forEach(show);
-  document.querySelectorAll(".timeframe").forEach(deactivate);
   const monthlyToggle = document.querySelector("#monthly-toggle");
   activate(monthlyToggle);
   return null;
