@@ -1,3 +1,13 @@
+const daily = document.querySelectorAll(".daily");
+const dailyToggle = document.querySelector("#daily-toggle");
+const weekly = document.querySelectorAll(".weekly");
+const weeklyToggle = document.querySelector("#weekly-toggle");
+const monthly = document.querySelectorAll(".monthly");
+const monthlyToggle = document.querySelector("#monthly-toggle");
+const timeframe = document.querySelectorAll(".timeframe");
+const current = document.querySelectorAll(".current");
+const previous = document.querySelectorAll(".previous");
+
 const hide = (elem) => {
   elem.classList.remove("visible");
 };
@@ -15,31 +25,28 @@ const activate = (elem) => {
 };
 
 const reset = () => {
-  document.querySelectorAll(".current").forEach(hide);
-  document.querySelectorAll(".previous").forEach(hide);
-  document.querySelectorAll(".timeframe").forEach(deactivate);
+  current.forEach(hide);
+  previous.forEach(hide);
+  timeframe.forEach(deactivate);
 };
 
 const activateDaily = () => {
   reset();
-  document.querySelectorAll(".daily").forEach(show);
-  const dailyToggle = document.querySelector("#daily-toggle");
+  daily.forEach(show);
   activate(dailyToggle);
-  return null;
+  return false;
 };
 
 const activateWeekly = () => {
   reset();
-  document.querySelectorAll(".weekly").forEach(show);
-  const weeklyToggle = document.querySelector("#weekly-toggle");
+  weekly.forEach(show);
   activate(weeklyToggle);
-  return null;
+  return false;
 };
 
 const activateMonthly = () => {
   reset();
-  document.querySelectorAll(".monthly").forEach(show);
-  const monthlyToggle = document.querySelector("#monthly-toggle");
+  monthly.forEach(show);
   activate(monthlyToggle);
-  return null;
+  return false;
 };
