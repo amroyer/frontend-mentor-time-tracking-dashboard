@@ -73,7 +73,7 @@ nav li:hover {
 .card .front {
   background-color: var(--dark-blue);
   grid-row: 2 / 6;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 2rem;
   z-index: 1;
 }
 
@@ -107,7 +107,7 @@ nav li:hover {
   grid-area: self-care;
 }
 
-.rear img {
+.rear .bg-img {
   position: absolute;
   right: 12px;
 }
@@ -171,12 +171,16 @@ h1 {
 }
 
 /* Other cards */
+.card-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
 .current {
   display: none;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 300;
-  margin-bottom: 0.6rem;
-  margin-top: 0.6rem;
 }
 
 .previous {
@@ -188,25 +192,24 @@ h1 {
   display: revert;
 }
 
-.dropdown-icon {
+.card-header {
   align-items: center;
-  border-radius: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-icon {
   cursor: pointer;
-  display: flex;
-  height: 3.5rem;
-  justify-content: center;
-  width: 3.5rem;
 }
 
 .dropdown-icon:hover {
-  background-color: hsla(236, 100%, 87%, 10%);
+  filter: brightness(125%);
 }
 
 .work-card .rear {
   background-color: var(--work-color);
 }
 
-.work-card img {
+.work-card .bg-img {
   top: -12px;
 }
 
@@ -214,7 +217,7 @@ h1 {
   background-color: var(--play-color);
 }
 
-.play-card img {
+.play-card .bg-img {
   top: -6px;
 }
 
@@ -222,7 +225,7 @@ h1 {
   background-color: var(--study-color);
 }
 
-.study-card img {
+.study-card .bg-img {
   top: -6px;
 }
 
@@ -230,7 +233,7 @@ h1 {
   background-color: var(--exercise-color);
 }
 
-.exercise-card img {
+.exercise-card .bg-img {
   top: -3px;
 }
 
@@ -238,7 +241,7 @@ h1 {
   background-color: var(--social-color);
 }
 
-.social-card img {
+.social-card .bg-img {
   top: -3px;
 }
 
@@ -246,7 +249,7 @@ h1 {
   background-color: var(--self-care-color);
 }
 
-.self-care-card img {
+.self-care-card .bg-img {
   top: -12px;
 }
 
@@ -293,6 +296,19 @@ h1 {
     height: 100%;
     justify-content: space-between;
     padding-block: 2.5rem;
+  }
+
+  .card-header {
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    display: revert;
+  }
+
+  .current {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
   }
 }
 
