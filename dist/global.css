@@ -35,7 +35,7 @@ nav li {
 }
 
 nav li:hover {
-  filter: brightness(125%);
+  color: hsl(0, 0%, 100%);
 }
 
 /* Layout */
@@ -77,10 +77,19 @@ nav li:hover {
   z-index: 1;
 }
 
+.card .front:hover {
+  filter: brightness(200%);
+}
+
 .card .rear {
   grid-row: 1 / 3;
   overflow: hidden;
   z-index: 0;
+}
+
+.rear .bg-img {
+  position: absolute;
+  right: 12px;
 }
 
 .work-card {
@@ -105,11 +114,6 @@ nav li:hover {
 
 .self-care-card {
   grid-area: self-care;
-}
-
-.rear .bg-img {
-  position: absolute;
-  right: 12px;
 }
 
 /* Profile card */
@@ -202,7 +206,7 @@ h1 {
 }
 
 .dropdown-icon:hover {
-  filter: brightness(125%);
+  filter: brightness(300%);
 }
 
 .work-card .rear {
